@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --purple:#6e38e0;
+    --orange:#ff5f36;
+    --darkBlack:#151515;
+    --lightBlack:#282828;
+    --black:#1e1e1e;
+    --green:#00b85e;
+    --BrightYellow:#ffd928;
+    --yellow:#eab04d;
+    --darkYellow:#eab14d41;
+    --silver:#898989;
+    --white:#ffffff;
+    --darkBlue:#2bc7ee41;
+    --blue:#29c5ee;
+    --GreenishBlue:#19c8a7;
+    --darkGreenishBlue:#19c8a841;
+    --darkRed:#d11a2c41;
+    --red:#cf1a2c;
+    --lightSilver:#9388893c;
+    --font-family: "Urbanist", sans-serif;
+    --radius:16px ;
+    --semiBold:600;
+    --border-left:6px;
+    --header-height:85px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--white);
+    font-family: var(--font-family);
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: var(--header-height) calc(100vh - var(--header-height));
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--darkBlack);
+    grid-column: span 2;
+    display: flex;
+    .brand {
+        border-right: 3px solid var(--lightBlack);
+        width:20%; 
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .bar {
+        color: var(--silver);
+        width:80%;
+        padding: 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .search-box {
+            height: 50%;
+            width: 30%;
+            background-color: var(--lightBlack);
+            border-radius: 100px;
+            padding: 0px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            input {
+                width: 100%;
+                color: var(--white);
+                background-color: transparent;
+                border: none;
+                &:focus-visible {
+                   outline: none; 
+                }
+            }
+        }
+
+        .settings {
+            display: flex;
+            gap: 10px;
+            i {
+                width: 40px;
+                height: 40px;
+                background-color:var(--lightBlack);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    width: 45px;
+                    height: 45px;
+                    cursor: pointer;
+                }
+            }
+        
+        }
+    }
+}
