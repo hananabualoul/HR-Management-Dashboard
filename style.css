@@ -50,6 +50,7 @@ aside {
     color: var(--silver);
     background-color: var(--darkBlack);
     border-top: 2px solid var(--lightBlack);
+    border-right: 2px solid var(--lightBlack);
     padding:15px 20px;
     grid-column:1/2;
     grid-row: 2/4;
@@ -58,6 +59,144 @@ aside {
 
 .count {
     position: relative;
+}
+
+#candidates-table-title,#job-openings {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-transform: capitalize;
+    width: calc(100% - 60px);
+}
+
+#candidates-table-title div:first-child,#job-openings div:first-child {
+    color: var(--white);
+    font-size: 25px;
+    font-weight: var(--semiBold);
+}
+
+#candidates-table-title div:last-child ,#job-openings div:last-child{
+    height: 10px;
+    font-size: 13px;
+    color: var(--silver);
+    background-color: var(--lightBlack);
+    border-radius:30px;
+    padding: 20px 15px;
+    display: flex; 
+    align-items: center;
+    gap: 7px;
+}
+
+table {
+    background-color:transparent;
+    width: 100%;
+    color: var(--white);
+    text-transform: capitalize;
+    border-collapse: collapse; 
+}
+
+td{
+    padding: 15px;
+}
+
+th{
+    color: var(--silver); 
+    text-align:left;
+    padding: 10px 19px;
+    font-size: 14px;
+}
+
+tr:first-child {
+    background-color: var(--lightBlack);
+    text-transform: uppercase;
+}
+
+.attachments-info {
+    text-transform: lowercase;
+}
+
+table img {
+    width: 31px;
+}
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bi-star-fill {
+    color: var(--BrightYellow);
+}
+
+tr{
+    border-bottom: 1px solid var(--lightBlack);
+}
+
+.sorting-icons {
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sortable-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#table-header {
+    padding:10px 20px;
+    color: var(--silver);
+    text-transform: capitalize;
+    border-bottom: var(--lightBlack) solid 1px;
+    display: flex;
+}
+
+.header-item {
+    position: relative;
+    padding: 5px 21px;
+}
+
+.header-item:hover {
+    color: var(--white);
+}
+
+.header-item:hover:after {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    left: 0;
+    bottom:-12px;
+    height: 4px;
+    width:100%;
+    background-image: linear-gradient(to right,var(--purple),var(--orange));
+}
+
+tr th:first-child {
+    border-radius: 9px 0 0 9px;
+}
+
+tr th:last-child {
+    border-radius: 0 9px 9px 0;
+}
+
+tr:first-child {
+    border-bottom:none;
+}
+
+.candidates-table {
+    background-color: var(--black);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: calc(100% - 30px);
+}
+
+#table-body {
+    padding:0px 20px;
+
 }
 
 header {
@@ -122,6 +261,144 @@ header {
     }
 }
 
+.job-cards-container img {
+    width: 40px;
+}
+
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-listing-card,.g {
+    width: 315px;
+    flex: 0 0 auto;
+    border-radius: var(--radius);
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+
+.job-info {
+    font-size: 13px;
+    display: flex;
+    gap:10px;
+}
+
+.job-info div {
+    background-color: var(--lightBlack);
+    border-radius:20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding:4px 8px;
+}
+
+.job-info div span:first-child {
+    font-size: 15px;
+}
+
+.job-title {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.job-title span:first-child {
+    font-weight: var(--semiBold);
+}
+
+.job-title span:last-child {
+    font-size:13px;
+}
+
+.job-cards-container {
+    color: var(--silver);
+    display: flex;
+    gap:15px;
+    overflow-x:auto ;
+}
+
+.job-cards-container > div:nth-child(1),.g {
+    background-image: radial-gradient(150px 200px at top right,var(--darkBlue),var(--black));
+    border-left:var(--border-left) solid var(--blue);
+}
+
+.job-cards-container > div:nth-child(2) {
+    background-image: radial-gradient(150px 200px at top right,var(--darkRed),var(--black));
+    border-left:var(--border-left) solid var(--red);
+}
+
+.job-cards-container > div:nth-child(3) {
+    background-image: radial-gradient(150px 200px at top right,var(--darkYellow),var(--black));
+    border-left:var(--border-left) solid var(--yellow);
+}
+
+.job-cards-container > div:nth-child(4) {
+    background-image: radial-gradient(150px 200px at top right,var(--darkGreenishBlue),var(--black));
+    border-left:var(--border-left) solid var(--GreenishBlue);
+}
+
+.arrow-up-right {
+    border-bottom: 1px solid var(--white);
+    border-radius: 1px;;
+}
+
+.job-details-arrow {
+    width: 40px;
+    height: 40px;
+    background-color: var(--lightSilver);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job-card-header-left {
+    display: flex;
+    gap: 10px;
+}
+
+.application-stats {
+    font-size: 14px;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+.application-stats div:last-child {
+    color: var(--green);
+    margin-top: 10px;
+}
+
+.application-stats div span:first-child {
+    font-size: 30px;
+    font-weight: var(--semiBold);
+}
+
+.job-title span:first-child,.application-stats div span:first-child {
+    color: var(--white);
+}
+
+.job-title span:first-child,.job-info div:first-child span:last-child {
+    text-transform: capitalize;
+}
+
+main {
+    background-color: var(--darkBlack);
+    grid-column:2/3;
+    grid-row:2/3;
+    height:calc(100vh - var(--header-height));
+    display: grid;
+    grid-template-rows:220px auto;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-top: 2px solid var(--lightBlack); 
+}
+
 #messages-count {
     font-size: 14px;
     font-weight: var(--semiBold);
@@ -165,16 +442,22 @@ nav {
     padding-left:7px;
 }
 
+section:first-child,section:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section:first-child {
+    overflow-x:hidden;
+}
+
 ::-webkit-scrollbar {
-    width:3px;
+    width:0px;
+    height: 0px;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color:var(--lightBlack);
-    border-radius:10px; 
-}
 
-::-webkit-scrollbar-track {
-    background:var(--darkBlack);
-    border-radius: 10px; 
-}
+
+
+
