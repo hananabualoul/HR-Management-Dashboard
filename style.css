@@ -45,6 +45,10 @@ a {
     color: var(--silver);
 }
 
+a:hover {
+    cursor: pointer;
+}
+
 aside {
     height: 100vh;
     color: var(--silver);
