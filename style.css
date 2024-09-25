@@ -61,8 +61,235 @@ aside {
     overflow-y: auto;
 }
 
+.application-details {
+    padding: 10px;
+    text-transform: capitalize;
+    background-color:var(--lightBlack);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .application-title {
+        font-weight: var(--semiBold);
+        font-size: 19px;
+    }
+    .application-title,.timeline-label {
+        color: var(--white);
+    }
+
+    
+    .application-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .timeline-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .timeline-date {
+                font-size: 11px ;
+            }
+        }
+        .timeline-item-icon,.num {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .num {
+            background-color:rgba(30, 30, 30, 0.409);
+        }
+
+        .green {
+            background-color: var(--green);
+        }
+
+        .yellow {
+            background-color: var(--yellow);
+        }
+
+        & > div:nth-child(2) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .timeline-status {
+                font-size: 12px;
+                color: var(--yellow);
+                background-color:rgba(30, 30, 30, 0.409);
+                padding: 10px;
+                border-radius: 20px;
+            }
+        }
+        
+    }
+}
+
+.bi-check2,.bi-hourglass {
+    color: var(--darkBlack);
+    font-size: 18px;
+}
+
 .count {
     position: relative;
+}
+
+.contact-item-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    background-color: rgba(30, 30, 30, 0.409);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidate-profile {
+   height: 100vh;
+   width:360px;
+   color: var(--silver);
+   background-color: var(--darkBlack);
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   padding:15px;
+   overflow-y: auto;
+   position: absolute;
+   right: 0;
+   top: 0;
+   .candidate-info {
+    padding: 10px;
+    background-color:var(--lightBlack);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+   }
+}
+
+.candidate-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.candidate-header {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        color: var(--white);
+        text-transform: capitalize;
+    }
+
+    div {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        background-color: var(--lightBlack);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--lightBlack);
+    border-radius: 10px;
+    padding: 10px;
+    .experience-title {
+        font-size: 18px;
+    }
+
+    .experience-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .company-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    .experience-duration {
+        font-size: 12px;
+    }
+
+    .company-name,.experience-title {
+        color: var(--white);
+    }
+
+    .experience-title,.experience-item {
+        text-transform: capitalize;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    text-transform: capitalize;
+    img {
+        width: 70px;
+    }
+
+    .candidate-name {
+        color: var(--white);
+    }
+
+    .candidate-role {
+        font-size:12px;
+    }
+
+    .img-container {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    
+    
+}
+
+.contact-info {
+    display: flex;
+    gap: 25px;
+    .contact-label {
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+
+    .contact-value {
+        color: var(--white);
+        font-size: 12px;
+    }
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 #candidates-table-title,#job-openings {
@@ -121,12 +348,6 @@ tr:first-child {
 
 table img {
     width: 31px;
-}
-
-.candidate-info {
-    display: flex;
-    align-items: center;
-    gap: 5px;
 }
 
 .bi-star-fill {
@@ -418,6 +639,15 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 25px;
+}
+
+.next-step {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-image:linear-gradient(to right,var(--purple),var(--orange));
+    color: var(--white);
+    padding: 15px 10px;
 }
 
 .nav-group {
